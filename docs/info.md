@@ -17,6 +17,7 @@ by switching on the input 8 the display updates
 ## How to test
 
 Explain how to use your project
+i dont know
 
 ## External hardware
 
