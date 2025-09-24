@@ -8,8 +8,6 @@ You can also include images in this folder and reference them in the markdown. E
 -->
 
 ## How it works
-
-Explain how your project works
 input 1 to 4 should display 1 to 4 on the 7-segment display
 only one input should be turned on
 by switching on the input 8 the display updates
@@ -18,8 +16,5 @@ by switching on the input 8 the display updates
 i dont know
 
 ## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
-
 7-segment display
 input buttons for pin 1, 2, 3, 4 and 8
