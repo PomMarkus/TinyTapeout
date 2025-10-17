@@ -33,7 +33,7 @@ CTRL2 (0x02):
 0        1         2        3        4        5        6        7
 CB12     CB13      CB14     CB15     CB16     CB17     CB18     CB19
 
-E_DA: Enable Direct Output
+E_DO: Enable Direct Output
 When this bit is set, the Stepper is turned off and the direct output is enabled.
 Direct output means, that the input pins will be enabled on the output for the 7-seg. Display.
 
