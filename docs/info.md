@@ -10,14 +10,15 @@ You can also include images in this folder and reference them in the markdown. E
 ## How it works
 Hardware Adress: 1000111(1/0) -> 0x8E (0x8F for write - but is not implemented)
 
-DATA1 (0x08):
-DATA2 (0x09):
-DATA3 (0x0A):
-DATA4 (0x0B):
-DATA5 (0x0C):
-DATA6 (0x0D):
-DATA7 (0x0E):
-DATA8 (0x0F):
+Data Registers:
+- DATA1 (0x08)
+- DATA2 (0x09)
+- DATA3 (0x0A)
+- DATA4 (0x0B)
+- DATA5 (0x0C)
+- DATA6 (0x0D)
+- DATA7 (0x0E)
+- DATA8 (0x0F)
 
 
 CTRL0 (0x00): 
