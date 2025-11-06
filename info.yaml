@@ -18,7 +18,6 @@ project:
   # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
     - "general_top.v"
-    - "tb_general_top.v"
     - "i2c_top.v"
     - "top_module.v"
     - "I2C_active.v"
