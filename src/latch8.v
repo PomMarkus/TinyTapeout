@@ -1,0 +1,14 @@
+module latch8 (
+    input  wire        en,   // enable: transparent when high
+    input  wire        rst,  // asynchronous reset (active high)
+    input  wire [7:0]  d,    // data input
+    output reg  [7:0]  q     // latched output
+);
+    always @(*) begin
+        if (rst)
+            q = 8'b0;       // immediately clear output
+        else if (en)
+            q = d;          // transparent when enabled
+        // when en=0 and rst=0, q holds previous value
+    end
+endmodule
