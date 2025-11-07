@@ -18,7 +18,7 @@ module stepper_onehot_28(
 
     // One-hot decoder
     always @(*) begin
-        step = 28'b0;      // default all 0
+        step = 29'b0;      // default all 0 //CHANGED: 28 to 29
         step[cnt] = 1'b1;
     end
 

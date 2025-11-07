@@ -7,12 +7,13 @@ module i2c_top(
     output wire [10:0] registerSelect
 );
 
-    wire start, stop;
+    wire start; //CHANGED: 2 lines instead of 1
+    wire stop;
     wire i2c_started;
     wire [28:0] step;
     wire [7:0] ff_clk;
     wire enable_output;
-    wire [3:0] regAdr;
+    // wire [3:0] regAdr; //CHANGED: unused 
 
     //----------------------------------------------------------
     // Detect Start and Stop conditions

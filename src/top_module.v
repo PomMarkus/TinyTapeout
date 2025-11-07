@@ -31,14 +31,16 @@ module top_module (
     wire [7:0] ctrl1 = reg_data[1];
     wire [7:0] ctrl2 = reg_data[2];
 
-    wire [7:0] data1 = reg_data[3];
-    wire [7:0] data2 = reg_data[4];
-    wire [7:0] data3 = reg_data[5];
-    wire [7:0] data4 = reg_data[6];
-    wire [7:0] data5 = reg_data[7];
-    wire [7:0] data6 = reg_data[8];
-    wire [7:0] data7 = reg_data[9];
-    wire [7:0] data8 = reg_data[10];
+    // CHANGED: Unused wires removed
+
+    // wire [7:0] data1 = reg_data[3];
+    // wire [7:0] data2 = reg_data[4];
+    // wire [7:0] data3 = reg_data[5];
+    // wire [7:0] data4 = reg_data[6];
+    // wire [7:0] data5 = reg_data[7];
+    // wire [7:0] data6 = reg_data[8];
+    // wire [7:0] data7 = reg_data[9];
+    // wire [7:0] data8 = reg_data[10];
 
     // =========================================
     // Counter + Compare Logic

@@ -1,4 +1,4 @@
-module tt_um_pommarkus_i2c_slave (
+module general_top (
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
     input  wire [7:0] uio_in,   // IOs: Input path (SDA/SCL etc.)
@@ -59,5 +59,3 @@ module tt_um_pommarkus_i2c_slave (
     wire _unused = &{ena, clk, rst, 1'b0};
 
 endmodule
-
-
