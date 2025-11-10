@@ -12,6 +12,8 @@ module latch8 (
     input  wire [7:0]  d,    // data input
     output reg  [7:0]  q     // latched output
 );
+
+/* verilator lint_off UNOPTFLAT */
     always @(*) begin
         if (rst)
             q = 8'b0;
@@ -20,6 +22,8 @@ module latch8 (
         else
             q = q; // Latch: hält den Wert
     end
+/* verilator lint_on UNOPTFLAT */
+
 endmodule
 
 `endif
