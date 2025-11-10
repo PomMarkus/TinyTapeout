@@ -60,7 +60,12 @@ async def test_project(dut):
     dut.ena.value = 0
     dut.ui_in.value = 0
     dut.uio_in.value = 0
-    dut.uio_in[0].value = 1  # SDA idle high
+    
+    # SDA idle high
+    val = int(dut.uio_in.value)
+    val |= 1 << 0   # set bit 0
+    dut.uio_in.value = val
+    
     await Timer(2, units="us")
     dut.rst_n.value = 1
     dut.ena.value = 1
