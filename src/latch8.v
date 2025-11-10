@@ -12,14 +12,13 @@ module latch8 (
     input  wire [7:0]  d,    // data input
     output reg  [7:0]  q     // latched output
 );
+    // Absichtlich Latch: always_latch
     always_latch begin
         if (rst)
-            q = 8'b0;
+            q = 8'b0;   // reset
         else if (en)
-            q = d;
-        // else q hält automatisch den Wert
-        else
-            q = q;
+            q = d;      // transparent
+        // kein else nötig: q hält automatisch den Wert
     end
 endmodule
 
