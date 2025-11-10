@@ -7,20 +7,27 @@
 `define __DFF8__
 
 module DFFx8(
+    input  wire        clk,
     input  wire        rst,
     input  wire        data_in,
-    input  wire [7:0]  ff_clock,
+    input  wire [7:0]  ff_enable,
     output reg  [7:0]  data
 );
 
-    always @(posedge ff_clock[7] or posedge rst) if (rst) data[0] <= 0; else data[0] <= data_in;
-    always @(posedge ff_clock[6] or posedge rst) if (rst) data[1] <= 0; else data[1] <= data_in;
-    always @(posedge ff_clock[5] or posedge rst) if (rst) data[2] <= 0; else data[2] <= data_in;
-    always @(posedge ff_clock[4] or posedge rst) if (rst) data[3] <= 0; else data[3] <= data_in;
-    always @(posedge ff_clock[3] or posedge rst) if (rst) data[4] <= 0; else data[4] <= data_in;
-    always @(posedge ff_clock[2] or posedge rst) if (rst) data[5] <= 0; else data[5] <= data_in;
-    always @(posedge ff_clock[1] or posedge rst) if (rst) data[6] <= 0; else data[6] <= data_in;
-    always @(posedge ff_clock[0] or posedge rst) if (rst) data[7] <= 0; else data[7] <= data_in;
+always @(negedge clk or posedge rst) begin
+    if (rst)
+        data <= 8'b0;
+    else begin
+        if (ff_enable[7]) data[0] <= data_in;
+        if (ff_enable[6]) data[1] <= data_in;
+        if (ff_enable[5]) data[2] <= data_in;
+        if (ff_enable[4]) data[3] <= data_in;
+        if (ff_enable[3]) data[4] <= data_in;
+        if (ff_enable[2]) data[5] <= data_in;
+        if (ff_enable[1]) data[6] <= data_in;
+        if (ff_enable[0]) data[7] <= data_in;
+    end
+end
 
 endmodule
 

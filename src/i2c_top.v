@@ -66,9 +66,10 @@ module i2c_top(
     // reuse same DFFs — only one active pulse at a time
 
     DFFx8 dff(
+        .clk(SCL),
         .rst(rst | addr_nack),
         .data_in(SDA),
-        .ff_clock(ff_clk),
+        .ff_enable(ff_clk),
         .data(data)
     );
 
