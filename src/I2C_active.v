@@ -60,6 +60,8 @@ module I2C_active(
 
     // D-Latch: transparent when SCL is low
     reg Q;
+    
+/* verilator lint_off LATCH */
     always @(*) begin
         if (rst)
             Q = 1'b0;
@@ -67,6 +69,7 @@ module I2C_active(
             Q = SDA;      // Latch follows SDA when SCL is low
         // else: hold previous Q
     end
+/* verilator lint_on LATCH */
 
     // Combinational Start/Stop detection
     assign Start = SCL & ~SDA &  Q;
