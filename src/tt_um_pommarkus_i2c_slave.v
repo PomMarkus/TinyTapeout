@@ -58,11 +58,11 @@ module tt_um_pommarkus_i2c_slave (
     assign uo_out = core_uo_out;
 
     // IO outputs (tri-state SDA driven during ACK)
-    assign uio_out = {7'b0, ACK_enable & ena};  // only uio_out[0] drives SDA
+    assign uio_out = {7'b0, 1'b0};  // only uio_out[0] drives SDA
     assign uio_oe  = {7'b0, ACK_enable & ena};  // output enable for SDA
 
     // Unused signals to prevent warnings
-    wire _unused = &{ena, clk, rst, 1'b0};
+    wire _unused = &{ena, uio_in[7:2], uio_oe[7:2], uio_out[7:2], 1'b0};
 
 endmodule
 

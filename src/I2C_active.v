@@ -45,7 +45,6 @@ endmodule
     I2C Start/Stop condition detector
 */
 
-`timescale 1ns/1ps
 `default_nettype none
 `ifndef __I2C_ACTIVE__
 `define __I2C_ACTIVE__
