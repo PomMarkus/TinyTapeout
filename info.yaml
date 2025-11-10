@@ -28,7 +28,7 @@ project:
     - "decoder.v"
     - "counter_compare.v"
     - "latch8.v"
-    - "enable.v"
+    - "enabler.v"
 
     
 
