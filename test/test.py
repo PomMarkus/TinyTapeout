@@ -58,7 +58,7 @@ async def test_project(dut):
             dut.uio_in.value = val   
             await Timer(4, unit="us")
 
-    cocotb.start_soon(i2c_clock())
+    
 
     # Reset
     dut.rst_n.value = 0
@@ -70,10 +70,12 @@ async def test_project(dut):
     # val = int(dut.uio_in.value)
     # val |= 1 << 0   # set bit 0
     # dut.uio_in.value = val
-    
+
     await Timer(2, unit="us")
     dut.rst_n.value = 1
     dut.ena.value = 1
+
+    cocotb.start_soon(i2c_clock())
 
     # Direct pass-through test
     dut.ui_in.value = 0xA5
