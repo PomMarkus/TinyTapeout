@@ -1,3 +1,11 @@
+/*
+	enable module: passes input to output when enable is high
+*/
+
+`default_nettype none
+`ifndef __LATCH8__
+`define __LATCH8__
+
 module latch8 (
     input  wire        en,   // enable: transparent when high
     input  wire        rst,  // asynchronous reset (active high)
@@ -12,3 +20,6 @@ module latch8 (
         // when en=0 and rst=0, q holds previous value
     end
 endmodule
+
+`endif
+`default_nettype wire

@@ -1,3 +1,11 @@
+/*
+	8 D flip-flops with individual clocks
+*/
+
+`default_nettype none
+`ifndef __DFF8__
+`define __DFF8__
+
 module DFFx8(
     input  wire        rst,
     input  wire        data_in,
@@ -15,3 +23,6 @@ module DFFx8(
     always @(posedge ff_clock[0] or posedge rst) if (rst) data[7] <= 0; else data[7] <= data_in;
 
 endmodule
+
+`endif
+`default_nettype wire
