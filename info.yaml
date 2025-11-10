@@ -17,9 +17,9 @@ project:
   # Source files must be in ./src and you must list each source file separately, one per line.
   # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
-    - "general_top.v"
+    - tt_um_pommarkus_i2c_slave.v"
     - "i2c_top.v"
-    - "top_module.v"
+    - "output_part.v"
     - "I2C_active.v"
     - "rs_latch.v"
     - "stepper_onehot.v"
