@@ -14,6 +14,7 @@ module latch8 (
 );
 
 /* verilator lint_off UNOPTFLAT */
+/* verilator lint_off LATCH */
     always @(*) begin
         if (rst)
             q = 8'b0;
@@ -21,6 +22,7 @@ module latch8 (
             q = d;
     end
 /* verilator lint_on UNOPTFLAT */
+/* verilator lint_on LATCH */
 
 endmodule
 
