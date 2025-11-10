@@ -45,9 +45,12 @@ async def test_project(dut):
     # Create external I2C clock 100 kHz (uio_in[1])
     async def i2c_clock():
         while True:
-            dut.uio_in[1].value = 0
+            val = int(dut.uio_in.value)
+            val |= (1 << 1)
+            dut.uio_in.value = val
             await Timer(5, units="us")
-            dut.uio_in[1].value = 1
+            val &= ~(1 << 1)
+            dut.uio_in.value = val
             await Timer(5, units="us")
 
     cocotb.start_soon(i2c_clock())
