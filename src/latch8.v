@@ -19,8 +19,6 @@ module latch8 (
             q = 8'b0;
         else if (en)
             q = d;
-        else
-            q = q; // Latch: hält den Wert
     end
 /* verilator lint_on UNOPTFLAT */
 
