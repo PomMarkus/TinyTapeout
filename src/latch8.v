@@ -12,12 +12,12 @@ module latch8 (
     input  wire [7:0]  d,    // data input
     output reg  [7:0]  q     // latched output
 );
-    always @(*) begin
+    always_latch begin
         if (rst)
-            q = 8'b0;       // immediately clear output
+            q = 8'b0;
         else if (en)
-            q = d;          // transparent when enabled
-        // when en=0 and rst=0, q holds previous value
+            q = d;
+        // else q hält automatisch den Wert
     end
 endmodule
 
