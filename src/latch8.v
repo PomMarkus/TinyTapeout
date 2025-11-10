@@ -18,6 +18,8 @@ module latch8 (
         else if (en)
             q = d;
         // else q hält automatisch den Wert
+        else
+            q = q;
     end
 endmodule
 
